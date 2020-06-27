@@ -277,12 +277,19 @@ mat-icon {
     }
 
       @media(max-width: '1440px') {
+          .hero__content {
+              width: 100%;
+          }
           .hero__text {
               &-headline {
                   font-size: 5rem;
               }
           }
-
+          .hero {
+            .hero__image{
+                width: 49%;
+            }
+          }
           .worker__content {
             width: 85%;
           }
