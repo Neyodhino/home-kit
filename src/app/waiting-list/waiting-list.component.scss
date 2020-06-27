@@ -59,7 +59,7 @@
       }
       p {
         font-size: 1.7rem;
-        font-family: 'Lato', serif;
+        font-family: inherit;
         text-align: center;
 
         &::before {
@@ -81,7 +81,7 @@
       text-align: center;
       margin-bottom: 20px;
       font-size: 2.3rem;
-      font-family: 'Lato', serif;
+      font-family: inherit;
     }
     button {
       color: white;
@@ -93,7 +93,7 @@
       padding: 13px 70px;
       margin-top: 20px;
       font-size: 2rem;
-      font-family: 'Lato', sans-serif;
+      font-family: inherit;
       box-shadow: 20px 10px 40px #c7c7c7c7;
       margin-bottom: 50px;
     }
@@ -107,7 +107,7 @@ mat-form-field{
 mat-label {
   font-size: 16px;
   font-weight: bold;
-  font-family: 'Lato', serif;
+  font-family: inherit;
 }
 input {
   height: 100%;
@@ -152,7 +152,7 @@ input {
   }
   .join__info {
     width: 53%;
-    
+
     &-circle {
       padding: 50px 0px;
     }
@@ -165,7 +165,7 @@ input {
 @media(max-width: 1550px) {
   .join__info {
     width: 60%;
-    
+
     &-circle {
       padding: 50px 0px;
     }
