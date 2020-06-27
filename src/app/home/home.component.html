@@ -1,0 +1,72 @@
+<section class="hero">
+    <div class="hero__content">
+        <div class="hero__text">
+            <h1 class="hero__text-headline">Access COVID-19 tests from your home!</h1>
+            <p class="hero__text-paragraph">
+                LifeBank’s Home Sample Collection Kit is an easy-to-use kit created to guide individuals to collect nasal and oral swab samples used for the COVID-19 RT-PCR Screening Test. The kit provides everyone with a convenient and reliable alternative for sample collection from the comfort of their home.
+            </p>
+        </div>
+        <img src="../../assets/images/kit.png" alt="home kit image" class="hero__image">
+    </div>
+        <p>Request a kit!</p>
+        <a href="#worker" class="hero__img">
+            <p>Request a kit</p>
+            <fa-icon [icon]="direction"></fa-icon>
+        </a>
+</section>
+
+<section class="worker" id="one">
+    <h1 id="worker">You care for us everyday, Let us care for you!</h1>
+    <div class="worker__content">
+        <div class="worker__image">
+            <div class="composition">
+                <img src="../../assets/images/worker1.png" alt="" class="composition__photo composition__photo--p1">
+                <img src="../../assets/images/worker2.png" alt="" class="composition__photo composition__photo--p2">
+                <img src="../../assets/images/worker3.png" alt="" class="composition__photo composition__photo--p3">
+            </div>
+        </div>
+        <div class="worker__text" >
+            <p>Get access to COVID-19 testing facilities from the comfort of your home.
+                We created this kit to increase testing capacity in our communities and make us all safe.
+            </p>
+            <p>
+                 We are prioritising getting front-line healthcare workers tested and healthy.
+            </p>
+            <h2>Are you a frontline healthcare worker?</h2>
+            <button (click)="openDialog()">Yes</button>
+            <button (click)="route()">No</button>
+        </div>
+    </div>
+</section>
+
+<section class="faq">
+  <h1 id="faq">Frequently Asked Questions</h1>
+  <div class="faq__separator">✻</div>
+  <div class="faq__container">
+    <div class="col-1">
+        <div class="col-1-text">
+            <h1>Why Self Collection</h1>
+            <p>Self collection protects our healthcare workers from exposure to potential infection. It is also more convenient and efficient rather than driving to a center. It also makes it easy for certain groups like the sick and elderly to get tested.
+            </p>
+        </div>
+        <div class="col-1-text">
+            <h1>
+                Is Self Collection acceptable?
+            </h1>
+            <p>
+                Yes, our kit comes with detailed instructions and an audio guide to ensure patients collect samples safely and effectively. If you follow all instructions carefully you will get samples that yield accurate results, just like a sample collected by a professional.
+            </p>
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="col-2-text">
+            <h1>How do I order a kit?</h1>
+            <p>As a lab partner you can easily request for as many kits as you want from your dashboard. Individuals have to request for our kits   our registered lab partners. </p>
+        </div>
+        <div class="col-2-text">
+            <h1>Why is the Contactless Delivery style better?</h1>
+            <p>Our contactless pick up and drop off delivery model ensures that there is zero contact between the patient, our rider and your laboratory staff. It promotes social distancing and removes all forms of person-person infection transmission. </p>
+        </div>
+    </div>
+  </div>
+</section>

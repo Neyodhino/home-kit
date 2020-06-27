@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Request a kit</h2>
+<mat-dialog-content class="mat-typography">
+  <form>
+
+  <!-- <mat-form-field appearance="outline">
+    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose date and time" [disabled]="disabled" formControlName = "dateTime">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+      [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+      [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian"
+      ></ngx-mat-datetime-picker>
+      <mat-error *ngIf="requestForm.get('dateTime').errors?.required">
+        Choose a date and time
+      </mat-error>
+  </mat-form-field> -->
+
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First Name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="Phone Number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>MDCN Number</mat-label>
+      <input matInput placeholder="MDCN Number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Pickup Address</mat-label>
+      <input matInput placeholder="Pickup Address">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Preferred Pickup date</mat-label>
+      <input matInput placeholder="Preferred Pickup date">
+    </mat-form-field>
+    <button class="btn">Request</button>
+</form>
+</mat-dialog-content>

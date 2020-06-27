@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="header__content">
+        <a [routerLink]="['/home']"><img src="../../../../assets/images/logo" alt="lifebank_logo" class="header__logo"></a>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#worker" class="navigation__item-link">Request a kit</a></li>
+                <li class="navigation__item"><a [routerLink] = "['/waiting']" class="navigation__item-link">Join waiting list</a></li>
+                <li class="navigation__item"><a class="navigation__item-link" (click)= "openDialog()">Sign up your lab</a></li>
+                <li class="navigation__item"><a class="header__button" (click)="openLoginDialog()">Login</a></li>
+            </ul>
+        </nav>
+        <!-- <button class="header__button" (click)="openLoginDialog()">Login</button> -->
+    </div>
+</div>
+
+
+
+

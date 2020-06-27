@@ -1,0 +1,86 @@
+<section class="header">
+  <div class="header__content">
+    <p>With LifeBank’s Home sample collection kit you can easily collect medical samples needed for the COVID-19 screening from the comfort of your home! 
+    </p>
+    <p>
+      We will pick-up and deliver your samples to the testing centers! 
+    </p>
+    <p>Currently, we are prioritising healthcare workers to ensure their safety and allow them to provide the best care needed for treating infected patients. </p>
+    <p>
+        Join our waiting list now and be among the first people to know when a new inventory is available.
+    </p>
+    <a  href="#join" class="header__button">Join Now </a>
+  </div>
+</section>
+
+<section class="join">
+  <div class="join__content">
+    <div class="join__info">
+      <div class="join__info-circle">
+        <h1>50</h1>
+        <p>People on waiting list</p>
+      </div>
+      <div class="join__info-circle">
+        <h1>40</h1>
+        <p>Kits delivered</p>
+      </div>
+      <div class="join__info-circle">
+        <h1>30</h1>
+        <p>People tested with kit</p>
+      </div>
+    </div>
+    <div class="join__form">
+      <h1>Please fill out this form to join the waiting list</h1>
+      <form>
+
+        <!-- <mat-form-field appearance="outline">
+          <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose date and time" [disabled]="disabled" formControlName = "dateTime">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+            [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
+            [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian"
+            ></ngx-mat-datetime-picker>
+            <mat-error *ngIf="requestForm.get('dateTime').errors?.required">
+              Choose a date and time
+            </mat-error>
+        </mat-form-field> -->
+
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="Phone Number">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input matInput placeholder="Email Address">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Pickup Address</mat-label>
+            <input matInput placeholder="Pickup Address">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Preferred delivery address</mat-label>
+            <input matInput placeholder="Preferred Pickup date">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Number of Kits</mat-label>
+            <input matInput placeholder="Preferred Pickup date">
+          </mat-form-field>
+          <button class="btn" id="join">Request</button>
+      </form>
+    </div>
+  </div>
+</section>
