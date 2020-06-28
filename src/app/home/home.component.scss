@@ -63,15 +63,6 @@
         }
     }
 }
-
-mat-icon {
-  color: #B70303;
-  margin-top: -50px;
-  justify-self: flex-end;
-  align-self: center;
-  cursor: pointer;
-}
-
 @keyframes mover {
     0% {
         transform: translateY(-10);
@@ -173,7 +164,71 @@ mat-icon {
     }
 }
 
+
+/*======================================= Contactless delivery section =============================*/
+.contactless {
+  width: 80%;
+  background-color: #bd3c0b;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px 03px	#FEE8D6;
+
+  &__content {
+    width: 70%;
+    margin: 40px auto;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    h1 {
+      font-size: 6rem;
+      font-family: inherit;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 2rem;
+      font-family: inherit;
+      text-align: center;
+      margin-top: 20px;
+      line-height: 3.3rem;
+    }
+  }
+
+  &__separator {
+    margin: 0 auto 0px;
+    width: 600px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+
+    &::before {
+      display: inline-block;
+      width: 40%;
+      content: " ";
+      margin-top: 10px;
+      border: 1px solid white;
+      position: relative;
+      top: -5px;
+      margin-right: 20px;
+    }
+
+    &::after {
+      display: inline-block;
+      width: 40%;
+      content: " ";
+      margin-top: 10px;
+      border: 1px solid white;
+      top: -5px;
+      position: relative;
+      margin-left: 20px;
+    }
+}
+}
+
 .faq {
+  margin-top: 150px;
   h1 {
     font-family: 'Lato' sans-serif;
     font-size: 3rem;
@@ -293,8 +348,23 @@ mat-icon {
           .worker__content {
             width: 85%;
           }
+          .contactless {
+            &__content {
+              width: 90%;
+              h1 {
+                font-size: 4rem
+              }
+              p {
+                font-size: 1.9rem;
+                line-height: 3rem;
+              }
+            }
+            &__separator {
+              width: 400px;
+            }
+          }
       }
-      
+
       @media(max-width: '1292px') {
         .hero__content {
             width: 100%;
@@ -310,7 +380,7 @@ mat-icon {
 
         .worker__content {
           width: 85%;
-          
+
           button {
               margin-right: 3rem;
           }
@@ -334,10 +404,9 @@ mat-icon {
 
         .worker__content {
           width: 85%;
-          
+
           button {
               margin-right: 3rem;
           }
         }
     }
-    
