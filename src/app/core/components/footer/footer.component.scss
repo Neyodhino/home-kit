@@ -8,6 +8,7 @@ footer {
   width: 80%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;;
 }
 
@@ -71,6 +72,10 @@ footer {
   }
 }
 
+.social__mobile {
+  display: none;
+}
+
 .footer__copy {
   width: 100%;
   margin: auto;
@@ -107,4 +112,25 @@ footer {
     width: 43.6%;
   }
 }
+
+@media(max-width: 534px) {
+  
+  .footer__form {
+    width: 100%;
+  }
+  .footer__social {
+    display: none;
+  }
+  .social__mobile {
+    margin-top: 30px;
+    display: block;
+    svg {
+      margin-right: 30px;
+    }
+  }
+  .footer__content {
+    justify-content: space-between;
+  }
+}
+
 

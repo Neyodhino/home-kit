@@ -21,6 +21,7 @@
     }
 }
 
+
 .navigation {
     margin-top: 2.8rem;
     &__list {
@@ -42,5 +43,19 @@
                 color: #bd3c0b;
             }
         }
+    }
+}
+
+.nav__mobile {
+  margin-top: 20px;
+  display: none;
+}
+
+@media(max-width: 914px) {
+    .navigation {
+        display: none;
+    }
+    .nav__mobile {
+      display: inline-block;
     }
 }

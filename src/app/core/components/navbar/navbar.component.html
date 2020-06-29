@@ -10,9 +10,41 @@
             </ul>
         </nav>
         <!-- <button class="header__button" (click)="openLoginDialog()">Login</button> -->
+        <div class="nav__mobile">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click) = "openDialog()">
+              <span>Sign up your lab</span>
+            </button>
+            <button mat-menu-item>
+              <a [routerLink] = "['/waiting']" class="navigation__item-link">Join waiting list</a>
+            </button>
+            <button mat-menu-item>
+              <a href="#worker" class="navigation__item-link">Request a kit</a>
+            </button>
+            <button mat-menu-item (click) = "openLoginDialog()">
+              <a class="header__button" (click)="openLoginDialog()">Login</a>
+            </button>
+          </mat-menu>
+        </div>
     </div>
 </div>
 
-
-
-
+<!-- <div class="mobile">
+    <input type="checkbox" class="nav__checkbox" id="nav__toggle">
+    <label for="nav__toggle" class="nav__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
+    <div class="mobile__navigation">
+      <nav id="mobile__navigation-items">
+        <ul>
+            <li  class="navigation__item"><a href="#worker" class="navigation__item-link">Request a kit</a></li>
+            <li class="navigation__item"><a [routerLink] = "['/waiting']" class="navigation__item-link">Join waiting list</a></li>
+            <li class="navigation__item"><a class="navigation__item-link" (click)= "openDialog()">Sign up your lab</a></li>
+            <li class="navigation__item"><a class="header__button" (click)="openLoginDialog()">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div> -->
