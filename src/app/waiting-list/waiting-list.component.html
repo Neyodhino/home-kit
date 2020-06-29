@@ -1,5 +1,38 @@
-<section class="header">
-  <div class="header__content">
+<header>
+  <div class="header">
+    <div class="header__content">
+        <a [routerLink]="['/home']"><img src="../../../../assets/images/logo" alt="lifebank_logo" class="header__logo"></a>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a [routerLink] = "['/waiting']" class="navigation__item-link">Join waiting list</a></li>
+                <li class="navigation__item"><a class="navigation__item-link" (click)= "openDialog()">Sign up your lab</a></li>
+                <li class="navigation__item"><a class="header__button" (click)="openLoginDialog()">Login</a></li>
+            </ul>
+        </nav>
+        <!-- <button class="header__button" (click)="openLoginDialog()">Login</button> -->
+        <div class="nav__mobile">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click) = "openDialog()">
+              <span>Sign up your lab</span>
+            </button>
+            <button mat-menu-item>
+              <a [routerLink] = "['/waiting']" class="navigation__item-link">Join waiting list</a>
+            </button>
+            <button mat-menu-item (click) = "openLoginDialog()">
+              <a class="header__button" (click)="openLoginDialog()">Login</a>
+            </button>
+          </mat-menu>
+        </div>
+    </div>
+</div>
+</header>
+
+
+<section class="hero">
+  <div class="hero__content">
     <p>With LifeBank’s Home sample collection kit you can easily collect medical samples needed for the COVID-19 screening from the comfort of your home!
     </p>
     <p>
@@ -9,7 +42,7 @@
     <p>
         Join our waiting list now and be among the first people to know when a new inventory is available.
     </p>
-    <a  href="#join" class="header__button">Join Now </a>
+    <a  href="#join" class="hero__button">Join Now </a>
   </div>
 </section>
 

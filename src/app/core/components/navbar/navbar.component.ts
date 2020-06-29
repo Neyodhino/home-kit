@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+
   openDialog() {
     const dialogRef = this.dialog.open(LabPartnerComponent, {
       width: '600px'
