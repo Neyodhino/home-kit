@@ -20,8 +20,8 @@ footer {
     margin-bottom: 20px;
     font-size: 2.5rem;
     font-weight: 400;
-
   }
+
     form {
       button{
         font-size: 20px;
@@ -42,11 +42,17 @@ footer {
     padding: 18px;
     outline: none;
     width: 100%;
+    font-family: inherit;
   }
   textarea{
     outline: none;
     padding: 18px;
     width: 100%;
+    font-family: inherit;
+
+    &::placeholder {
+      font-family: inherit;
+    }
   }
 }
 
@@ -114,7 +120,7 @@ footer {
 }
 
 @media(max-width: 534px) {
-  
+
   .footer__form {
     width: 100%;
   }
