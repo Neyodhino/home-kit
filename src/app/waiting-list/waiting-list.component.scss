@@ -24,7 +24,7 @@
   &__button {
     margin-top: 10px;
     background-color: white;
-    padding: 20px 60px;
+    padding: 20px 50px;
     font-family: inherit;
     color: #bd3c0b;
     border-radius: 50px;
@@ -33,7 +33,6 @@
     outline: none;
     display: block;
     text-decoration: none;
-    width: 25%;
     font-weight: 500;
   }
 }
@@ -123,7 +122,6 @@ input {
     }
   }
   .hero__button {
-    width: 26%;
   }
   .join__circle {
     h1 {
@@ -145,7 +143,6 @@ input {
     }
   }
   .hero__button {
-    width: 29%;
   }
   .join__circle {
     h1 {
@@ -171,8 +168,10 @@ input {
 }
 
 @media(max-width: 1555px) {
-  .hero__button {
-    width: 32%;
+  .hero__content{
+    p {
+      font-size: 1.7rem;
+    }
   }
   .join__info {
     width: 51%;
@@ -196,7 +195,6 @@ input {
     }
   }
   .hero__button {
-    width: 35%;
   }
   .join__circle {
     h1 {
@@ -228,7 +226,6 @@ input {
     }
   }
   .hero__button {
-    width: 38%;
   }
   .join__circle {
     h1 {
@@ -250,8 +247,6 @@ input {
     }
   }
   .hero__button {
-    display: inline-block;
-    width: 35%;
   }
   .join__circle {
     h1 {
@@ -276,8 +271,6 @@ input {
     }
   }
   .hero__button {
-    display: inline-block;
-    width: 37%;
   }
   .join__circle {
     h1 {
@@ -289,7 +282,6 @@ input {
   }
 }
 
-
 @media(max-width: 1180px) {
   .hero__content {
     p {
@@ -298,8 +290,6 @@ input {
     }
   }
   .hero__button {
-    display: inline-block;
-    width: 40%;
   }
   .join__content {
     width: 90%;
@@ -319,7 +309,6 @@ input {
 
 @media(max-width: 1141px){
   .hero__button {
-    width: 47%;
   }
 }
 
@@ -331,8 +320,6 @@ input {
     }
   }
   .hero__button {
-    display: inline-block;
-    width: 45%;
   }
   .join__content {
     width: 90%;
@@ -359,8 +346,6 @@ input {
     }
   }
   .hero__button {
-    display: inline-block;
-    width: 48%;
   }
   .join__content {
     width: 90%;
@@ -383,8 +368,7 @@ input {
     width: 80%;
   }
   .hero__button {
-    display: inline-block;
-    width: 40%;
+
   }
   .join__info {
     width: 65%;
@@ -396,8 +380,6 @@ input {
     width: 80%;
   }
   .hero__button {
-    display: inline-block;
-    width: 45%;
   }
   .join__info {
     width: 70%;
@@ -416,14 +398,13 @@ input {
   }
   .hero__button {
     display: inline-block;
-    width: 50%;
   }
   .join__info {
     width: 100%;
   }
 }
 
-@media(max-width: 773px) {
+@media(max-width: 776px) {
   .hero {
     width: 100%;
     border-radius: 0;
@@ -431,10 +412,12 @@ input {
   .hero__content {
     padding-left: 40px;
     width: 100%;
+    p {
+      line-height: 3.2rem;
+    }
   }
   .hero__button {
     display: inline-block;
-    width: 32%;
   }
   .join__content {
     flex-wrap: wrap;
