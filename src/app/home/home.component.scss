@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right bottom, rgba(#bd3c0b, 1), rgba(#bd3c0b, 0.9)),
     url(../../assets/images/covid.png);
     background-position: center;
-    background-size: contain;
+    background-size:cover;
 
     &__content {
         margin: auto;
@@ -152,8 +152,13 @@
 
 /*======================================= Contactless delivery section =============================*/
 .contactless {
+  height: 90vh;
   width: 100%;
-  background-color: #bd3c0b;
+  background-image: linear-gradient(to right bottom, rgba(#bd3c0b, 0.85), rgba(#bd3c0b, 0.85)),
+  url(../../assets/images/contactless__bg.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: auto;
   box-shadow: 10px 10px 20px 03px	#FEE8D6;
   padding: 70px 0;
@@ -174,25 +179,44 @@
     padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &-text {
       width: 50%;
       p {
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-family: inherit;
         margin-top: 20px;
-        line-height: 3.3rem;
+        line-height: 4.3rem;
       }
     }
-    &-image {
+    blockquote {
+      font-family: inherit;
+      font-size: 40px;
       width: 40%;
-      height: 70%;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
+      align-self: center;
+   }
+   blockquote p {
+      font-style: italic;
+      color: white;
+      line-height: 6rem;
+      font-weight: bold;
+   }
+
+   blockquote p::before,
+   blockquote p::after {
+      content: "“";
+      font-family: Georgia;
+      font-size: 10rem;
+      margin: -2rem 0 0 -4rem;
+      position: absolute;
+      opacity: 0.5;
+   }
+
+   blockquote p::after {
+      content: "”";
+      margin: -1rem 0 0;
+   }
   }
 
   &__separator {
@@ -366,9 +390,14 @@
             }
             &__content {
               width: 90%;
-              p {
-                font-size: 1.7rem;
-                line-height: 3rem;
+              &-text {
+                p {
+                  font-size: 2rem;
+                  line-height: 3.7rem;
+                }
+              }
+              blockquote p {
+                font-size: 4rem;
               }
             }
             &__separator {
@@ -402,8 +431,13 @@
           width: 93%;
           &-text {
             p {
-              font-size: 2.2rem;
+              font-size: 2.5rem;
+              line-height: 5rem;
             }
+          }
+          blockquote p {
+            font-size: 41px;
+            line-height: 6.5rem;
           }
         }
 
@@ -425,10 +459,18 @@
         .hero__image {
           width: 20%;
         }
-
-        .contactless__content-image {
-          width: 43%;
-          height: 70%;
+        .contactless__content {
+          width: 93%;
+          &-text {
+            p {
+              font-size: 2.5rem;
+              line-height: 5rem;
+            }
+          }
+          blockquote p {
+            font-size: 39px;
+            line-height: 6.5rem;
+          }
         }
 
         .worker__content {
@@ -452,15 +494,17 @@
                 width: 90%;
             }
         }
-
         .contactless__content {
+          width: 93%;
           &-text {
             p {
-              font-size: 1.8rem;
+              font-size: 2.5rem;
+              line-height: 5rem;
             }
           }
-          &-image {
-            width: 39%;
+          blockquote p {
+            font-size: 37px;
+            line-height: 6.5rem;
           }
         }
 
@@ -508,15 +552,17 @@
         }
       }
 
-
       .contactless__content {
+        width: 93%;
         &-text {
           p {
-            font-size: 1.5rem;
+            font-size: 2.3rem;
+            line-height: 4rem;
           }
         }
-        &-image {
-          width: 33%;
+        blockquote p {
+          font-size: 27px;
+          line-height: 6.5rem;
         }
       }
   }
@@ -590,18 +636,28 @@
       }
     }
 
+    .contactless {
+      height: 95%;
+    }
+
     .contactless__content {
-      margin-top: -24px;
+      padding-left: 40px;
+      width: 93%;
       &-text {
-        width: 80%;
+        width: 90%;
         p {
-          font-size: 1.8rem;
+          font-size: 2rem;
+          line-height: 4rem;
         }
       }
-      &-image {
-        margin-top: 20px;
-        width: 70%;
+      blockquote {
+        margin-top: 70px;
+        width: 90%;
       }
+      // blockquote p {
+      //   font-size: 27px;
+      //   line-height: 6.5rem;
+      // }
     }
   }
 
@@ -753,6 +809,16 @@
     }
     .contactless__content {
       width: 98%;
+      &-text {
+        margin-top:  -54px;
+        p {
+          font-size: 1.9rem;
+          line-height: 3rem;
+        }
+      }
+      blockquote p {
+        line-height: 4rem;
+      }
     }
     .contactless__separator {
       width: 300px;
