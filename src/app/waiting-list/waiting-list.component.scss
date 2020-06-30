@@ -1,11 +1,9 @@
 @import '../core/components/navbar/navbar.component.scss';
 
 .hero {
-  background-image: linear-gradient(to right bottom, rgba(black, 0.7), rgba(#bd3c0b, 0.7)),
-  url(../../assets/images/home-delivery.jpeg);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: top;
+  background-color: #bd3c0b;
+  background-image: url('../../assets/images/waiting.png');
+  background-position: top 80px left 97%;
   border-radius: 5px 5px 50px 50px;
   height: 400px;
   width: 90%;
