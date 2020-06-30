@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right bottom, rgba(#bd3c0b, 1), rgba(#bd3c0b, 0.9)),
     url(../../assets/images/covid.png);
     background-position: center;
-    background-size:cover;
+    background-size:center;
 
     &__content {
         margin: auto;
@@ -152,7 +152,7 @@
 
 /*======================================= Contactless delivery section =============================*/
 .contactless {
-  height: 90vh;
+  height: 90%;
   width: 100%;
   background-image: linear-gradient(to right bottom, rgba(#bd3c0b, 0.85), rgba(#bd3c0b, 0.85)),
   url(../../assets/images/contactless__bg.png);
