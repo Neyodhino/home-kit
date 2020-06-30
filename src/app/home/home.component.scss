@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right bottom, rgba(#bd3c0b, 1), rgba(#bd3c0b, 0.9)),
     url(../../assets/images/covid.png);
     background-position: center;
-    background-size:center;
+    background-size: contain;
 
     &__content {
         margin: auto;
