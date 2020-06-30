@@ -379,11 +379,11 @@ input {
 }
 
 @media(max-width: 990px) {
+  .hero {
+    background-image: none;
+  }
   .hero__content {
     width: 80%;
-  }
-  .hero__button {
-
   }
   .join__info {
     width: 65%;
