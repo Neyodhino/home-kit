@@ -62,59 +62,73 @@
         <p>People tested with kit</p>
       </div>
     </div>
-    <div class="join__form">
+    <div class="join__form" *ngIf ="!showMessage">
       <h1 id="join">Please fill out this form to join the waiting list</h1>
-      <form>
+      <form [formGroup]="this.waitingListForm" (ngSubmit)="onSubmit(waitingListForm.value)" >
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First Name" formControlName="first_name">
+          <mat-error *ngIf="waitingListForm.get('first_name').errors?.required">
+            First Name is required
+          </mat-error>
+        </mat-form-field>
 
-        <!-- <mat-form-field appearance="outline">
-          <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose date and time" [disabled]="disabled" formControlName = "dateTime">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
-            [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
-            [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian"
-            ></ngx-mat-datetime-picker>
-            <mat-error *ngIf="requestForm.get('dateTime').errors?.required">
-              Choose a date and time
-            </mat-error>
-        </mat-form-field> -->
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" formControlName="last_name">
+          <mat-error *ngIf="waitingListForm.get('last_name').errors?.required">
+            Last name is required
+          </mat-error>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline">
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="First Name">
-          </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone Number</mat-label>
+          <input matInput placeholder="Phone Number" formControlName="phone_number">
+          <mat-error *ngIf="waitingListForm.get('phone_number').errors?.required">
+            Phone Number is required
+          </mat-error>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Last Name">
-          </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email Address:</mat-label>
+          <input matInput placeholder="Email Address" formControlName="email_address">
+          <mat-error *ngIf="waitingListForm.get('email_address').errors?.email">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="waitingListForm.get('email_address').errors?.required">
+            Email is required
+          </mat-error>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline">
-            <mat-label>Phone Number</mat-label>
-            <input matInput placeholder="Phone Number">
-          </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Pickup Address</mat-label>
+          <input matInput placeholder="Pickup Address" formControlName="pickup_address">
+          <mat-error *ngIf="waitingListForm.get('pickup_address').errors?.required">
+            Pickup Address
+          </mat-error>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline">
-            <mat-label>Email Address</mat-label>
-            <input matInput placeholder="Email Address">
-          </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Delivery Address</mat-label>
+          <input matInput placeholder="Delivery Address" formControlName="delivery_address">
+          <mat-error *ngIf="waitingListForm.get('delivery_address').errors?.required">
+            Delivery Address is required
+          </mat-error>
+        </mat-form-field>
 
-          <mat-form-field appearance="outline">
-            <mat-label>Pickup Address</mat-label>
-            <input matInput placeholder="Pickup Address">
-          </mat-form-field>
 
-          <mat-form-field appearance="outline">
-            <mat-label>Preferred delivery address</mat-label>
-            <input matInput placeholder="Preferred delivery address">
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>Number of Kits</mat-label>
-            <input matInput placeholder="Number of kits">
-          </mat-form-field>
-          <button class="btn">Request</button>
-      </form>
+        <mat-form-field appearance="outline">
+          <mat-label>Number of Kits</mat-label>
+          <input matInput placeholder="Contact Address" formControlName="number_of_kits">
+          <mat-error *ngIf="waitingListForm.get('number_of_kits').errors?.required">
+            Enter Number of kits
+          </mat-error>
+        </mat-form-field>
+        <button class="btn" [disabled]="!waitingListForm.valid">Register</button>
+    </form>
+    </div>
+    <div class="message" *ngIf="showMessage">
+      <p>Thank you for submitting your request. You have been successfully added to our waiting list. You will be contacted via email once the kits are available to members of the public in accordance to positions on this waiting list. Stay Home, Stay Safe, Stay Strong!</p>
     </div>
   </div>
 </section>
-

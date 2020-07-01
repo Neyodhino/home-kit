@@ -6,91 +6,68 @@
   <form [formGroup]="labPartnerForm">
     <mat-form-field appearance="outline">
       <mat-label>Name of Laboratory</mat-label>
-      <input matInput placeholder="Name of Laboratory" formControlName="org">
-      <mat-error *ngIf="labPartnerForm.get('org').errors?.required">
+      <input matInput placeholder="Name of Laboratory" formControlName="name_of_laboratory">
+      <mat-error *ngIf="labPartnerForm.get('name_of_laboratory').errors?.required">
         Laboratory Name is required
       </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Name of Lab Representative</mat-label>
-      <input matInput placeholder="Name of Lab Representative" formControlName="fname">
-      <mat-error *ngIf="labPartnerForm.get('fname').errors?.required">
+      <input matInput placeholder="Name of Lab Representative" formControlName="name_of_lab_representative">
+      <mat-error *ngIf="labPartnerForm.get('name_of_lab_representative').errors?.required">
         First name is required
       </mat-error>
     </mat-form-field>
 
-    <!-- <mat-form-field appearance="outline">
-      <mat-label>Last name of Lab Representative</mat-label>
-      <input matInput placeholder="Name of Lab Representative" formControlName="lname">
-      <mat-error *ngIf="labPartnerForm.get('lname').errors?.required">
-        Last name is required
-      </mat-error>
-    </mat-form-field> -->
-
     <mat-form-field appearance="outline">
       <mat-label>Contact Number</mat-label>
-      <input matInput placeholder="Contact Number" formControlName="phone">
-      <mat-error *ngIf="labPartnerForm.get('phone').errors?.required">
+      <input matInput placeholder="Contact Number" formControlName="contact_number">
+      <mat-error *ngIf="labPartnerForm.get('contact_number').errors?.required">
         Contact Number is required
       </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Contact Address</mat-label>
-      <input matInput placeholder="Contact Address" formControlName="address">
-      <mat-error *ngIf="labPartnerForm.get('address').errors?.required">
+      <input matInput placeholder="Contact Address" formControlName="contact_address">
+      <mat-error *ngIf="labPartnerForm.get('contact_address').errors?.required">
         Address is required
       </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Estimated Clientele base</mat-label>
-      <input matInput placeholder="City" formControlName="city">
-      <mat-error *ngIf="labPartnerForm.get('city').errors?.required">
+      <input matInput placeholder="Estimated clientele base" formControlName="estimated_clientele_base">
+      <mat-error *ngIf="labPartnerForm.get('estimated_clientele_base').errors?.required">
         Estimated Clientele base
       </mat-error>
     </mat-form-field>
 
-    <!-- <mat-form-field appearance="outline">
-      <mat-label>Sate</mat-label>
-      <input matInput placeholder="State" formControlName="address" formControlName="state">
-      <mat-error *ngIf="labPartnerForm.get('state').errors?.required">
-        State Field is required
-      </mat-error>
-    </mat-form-field> -->
-
-    <!-- <mat-form-field appearance="outline">
-      <mat-label>Country</mat-label>
-      <input matInput placeholder="Country" formControlName="country">
-      <mat-error *ngIf="labPartnerForm.get('country').errors?.required">
-        Country Field is required
-      </mat-error>
-    </mat-form-field> -->
-
     <mat-form-field appearance="outline">
       <mat-label>Email Address of Lab. Representative:</mat-label>
-      <input matInput placeholder="Email Address of Lab. Representative" formControlName="email">
-      <mat-error *ngIf="labPartnerForm.get('email').errors?.email && !labPartnerForm.get('email').errors?.required">
+      <input matInput placeholder="Email Address of Lab. Representative" formControlName="contact_email">
+      <mat-error *ngIf="labPartnerForm.get('contact_email').errors?.email">
         Please enter a valid email address
       </mat-error>
-      <mat-error *ngIf="labPartnerForm.get('email').errors?.required">
+      <mat-error *ngIf="labPartnerForm.get('contact_email').errors?.required">
         Email is required
       </mat-error>
     </mat-form-field>
 
+
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput placeholder="Contact Address" formControlName="address">
-      <mat-error *ngIf="labPartnerForm.get('address').errors?.required">
+      <input matInput placeholder="Contact Address" formControlName="password">
+      <mat-error *ngIf="labPartnerForm.get('password').errors?.required">
         password is required
       </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Confirm Password</mat-label>
-      <input matInput placeholder="Contact Address" formControlName="address">
-      <mat-error *ngIf="labPartnerForm.get('address').errors?.required">
+      <input matInput placeholder="Confirm Password" formControlName="confirm_password">
+      <mat-error *ngIf="labPartnerForm.get('password').value !== labPartnerForm.get('confirm_password')">
         password doesn't match
       </mat-error>
     </mat-form-field>

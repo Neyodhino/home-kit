@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './share/share.module';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,10 @@ import { RequestKitComponent } from './request-kit/request-kit.component';
 import { WaitingListComponent } from './waiting-list/waiting-list.component';
 import { LabPartnerComponent } from './supplierDialog/lab-partner.component';
 import { LoginComponent } from './login/login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LabRequestComponent } from './labRequest/labRequest.component';
+import { CanActivateGuard } from './core/guards/dashboard-route.guard';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RequestKitComponent,
     LabPartnerComponent,
     LoginComponent,
-    WaitingListComponent
+    WaitingListComponent,
+    DashboardComponent,
+    LabRequestComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     ShareModule
   ],
-  entryComponents: [RequestKitComponent, LabPartnerComponent, LoginComponent],
-  providers: [],
+  entryComponents: [RequestKitComponent, LabPartnerComponent, LoginComponent, LabRequestComponent],
+  providers: [CanActivateGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

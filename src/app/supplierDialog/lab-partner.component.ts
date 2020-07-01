@@ -15,24 +15,15 @@ export class LabPartnerComponent implements OnInit {
 
   ngOnInit(): void {
     this.labPartnerForm = this.formBuilder.group({
-      fname: ['', Validators.required],
-      lname: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      address: ['', Validators.required],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
-      country: ['', Validators.required],
-      phone: ['', Validators.required],
-      org: ['', Validators.required],
+      name_of_laboratory: ['', Validators.required],
+      name_of_lab_representative: ['', Validators.required],
+      contact_number: ['', Validators.required],
+      contact_address: ['', Validators.required],
+      estimated_clientele_base: ['', Validators.required],
+      contact_email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+      confirm_password: ['', Validators.required]
     });
   }
-
-  // onSubmit(formValue): void {
-  //   this.dataService.postLabPartner(formValue).subscribe(response => {
-  //     console.log(response);
-  //   },
-  //   error => {
-  //     console.log(error);
-  //   });
-  // }
 }
+

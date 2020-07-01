@@ -2,20 +2,19 @@
   <div class="footer__content">
     <div class="footer__form">
       <h1 class="footer__form__headline">Drop a message here</h1>
-      <form>
+      <form [formGroup]="this.contactForm" (ngSubmit)="onSubmit(this.contactForm.value)" >
           <div class="form__control">
-            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Name" required formControlName="name">
           </div>
           <div class="form__control">
-            <input type="email" placeholder="Email" required>
+            <input type="email" placeholder="Email" required formControlName="email">
           </div>
           <div class="form__control">
-            <textarea type="text" placeholder="Message" rows="3"  required></textarea>
+            <textarea type="text" placeholder="Message" rows="3"  required formControlName="message"></textarea>
           </div>
           <button class="btn-link">Submit</button>
         </form>
     </div>
-
 
     <div class="footer__social">
       <h1>Follow us on</h1>

@@ -1,50 +1,56 @@
 <h2 mat-dialog-title>Request a kit</h2>
 <mat-dialog-content class="mat-typography">
-  <form>
-
-  <!-- <mat-form-field appearance="outline">
-    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose date and time" [disabled]="disabled" formControlName = "dateTime">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
-      [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond"
-      [touchUi]="touchUi" [color]="color" [enableMeridian]="enableMeridian"
-      ></ngx-mat-datetime-picker>
-      <mat-error *ngIf="requestForm.get('dateTime').errors?.required">
-        Choose a date and time
-      </mat-error>
-  </mat-form-field> -->
-
+  <form [formGroup]="this.requestForm">
     <mat-form-field appearance="outline">
       <mat-label>First Name</mat-label>
-      <input matInput placeholder="First Name">
+      <input matInput placeholder="First Name" formControlName="first_name">
+      <mat-error *ngIf="requestForm.get('first_name').errors?.required">
+        First Name is required
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Last Name</mat-label>
-      <input matInput placeholder="Last Name">
+      <input matInput placeholder="Last Name" formControlName="last_name">
+      <mat-error *ngIf="requestForm.get('last_name').errors?.required">
+        Last Name is required
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Phone Number</mat-label>
-      <input matInput placeholder="Phone Number">
+      <input matInput placeholder="Phone Number" formControlName="phone_number">
+      <mat-error *ngIf="requestForm.get('phone_number').errors?.required">
+        Phone Number is required
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>MDCN Number</mat-label>
-      <input matInput placeholder="MDCN Number">
+      <input matInput placeholder="MDCN Number" formControlName="MDCN_Number">
+      <mat-error *ngIf="requestForm.get('MDCN_Number').errors?.required">
+        MDCN Number is required
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Pickup Address</mat-label>
-      <input matInput placeholder="Pickup Address">
+      <input matInput placeholder="Pickup Address" formControlName="pickup_address">
+      <mat-error *ngIf="requestForm.get('pickup_address').errors?.required">
+        Pickup Address is required
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Preferred pickup date</mat-label>
-      <input matInput [matDatepicker]="picker">
+      <input matInput [matDatepicker]="picker" formControlName="pickup_date">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <button class="btn">Request</button>
+    <mat-error *ngIf="requestForm.get('pickup_date').errors?.required">
+      Please pick a date
+    </mat-error>
+    <button class="btn" [mat-dialog-close] = "requestForm.value" [disabled]="!requestForm.valid">Request</button>
 </form>
 </mat-dialog-content>
+
